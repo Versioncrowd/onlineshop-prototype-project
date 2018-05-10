@@ -1,0 +1,47 @@
+<div class="container-fluid" id="checkout-container">
+  <div class="row">
+    <form class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 checkout-form">
+      <div class="form-group">
+        <h3>Confirm Customer Data</h3>
+        <label for="user-name" class="checkout-label">Name</label>
+        <input type="text" id="user-name" name="user-name" class="form-control" id="name" placeholder="Hans Mustermann">
+        <label for="user-street" class="checkout-label">Street</label>
+        <input type="text" id="user-street" name="user-street" class="form-control" id="street" placeholder="Musterstrasse 20">
+        <div class="form-row">
+          <div class="col-md-4">
+            <label for="user-postal" class="checkout-label">Postcode</label>
+            <input type="text" id="user-postal" name="user-postal" class="form-control" id="postcode" placeholder="10110">
+          </div>
+          <div class="col-md-8">
+            <label for="user-city" class="checkout-label">City</label>
+            <input type="text" id="user-city" name="user-city" class="form-control" id="city" placeholder="Musterstadt">
+          </div>
+        </div>
+      </div>
+      <div class="form-row paymentform">
+        <div class="col-md-12">
+          <div class="alert alert-danger" role="alert">
+            Please note: Payment options are not implemented in this test store. Therefore, all our quality products are provided to you free of charge!
+            Enjoy your newly purchased time!
+          </div>
+        </div>
+        <div class="col-md-12 products">
+          <ul class="product-list shopping-cart-items"></ul> 
+        </div>
+        <div class="col-md-6 products"> 
+          <div class="cart-total">Total: <span class="total"></span></div>
+        </div>
+        <div class="col-md-6 products"> 
+            <div class="ded-total">Deduction: <span class="total"></span></div>
+        </div>
+        <div class="col-md-6 offset-md-6 products"> 
+          <div class="end-total">End Price: <span class="total">€ 0</span></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary checkout-buy btn-block">Order</button>
+      </div>
+    </form>
+    </div>
+  </div>

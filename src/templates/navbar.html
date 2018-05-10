@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="http://localhost:5000">Buy Time</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-id="-1" data-name="All" href="#">All products</a>
+      </li>
+    </ul>
+  </div>
+
+<!--Navigation Button -->
+  <div class="right">
+    <ul class="shopping-nav">
+      <li class="cart" id="nav-cart">
+        <a href="#" id="cart" class="cart"><i class="fa fa-shopping-cart"></i>Cart <span class="badge">0</span></a>
+      </li>
+      <li class="login" id="nav-username">
+        <a href="#" id="username" class="login"><i class="fa fa-user"></i><span id="sp-username">Username</span></a>
+      </li>
+      <li class="login" id="nav-logout">
+        <a href="#" id="logout" class="login"><i class="fa fa-sign-in"></i>Logout</a>
+      </li>
+      <li class="login" id="nav-login">
+        <a href="#" id="login" class="login"><i class="fa fa-sign-in"></i>Login</a>
+      </li>
+      <li class="register" id="nav-register">
+        <a href="#" id="register" class="register"><i class="fa fa-user"></i>Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="shopping-cart">
+  <div class="shopping-cart-header">
+    <i class="fa fa-shopping-cart cart-icon"></i>Total products: <span class="badge">0</span>
+    <div class="shopping-cart-total">
+      <span class="lighter-text">Total price:</span>
+      <span class="total"></span>
+    </div>
+  </div>
+  <!--end shopping-cart-header -->
+  <ul class="shopping-cart-items">
+  </ul>
+  <button type="button" class="btn btn-dark btn-block checkout-proceed">Checkout
+  </button>
+  <button type="button" class="btn btn-danger emptyCart btn-block">Remove all products</button>
+</div> <!--end shopping-cart -->
+
+<div class="login-container"><!-- start login container -->
+  <form id="login-submit" class="form-signin">
+    <h4 class="form-signin-heading">Please sign in</h4>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control form-control-sm" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control form-control-sm" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button id="signin-button" class="btn btn-primary btn-block" type="submit">Sign in</button>
+    <a id="register-link" class="signin-link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Dont have an account? Register!</a>
+<!--     <a id="passwordreset-link" class="signin-link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>Forgot your password! Click here!</a> -->
+  </form>
+</div> <!-- /container -->
+
+<div class="register-container"><!-- start login container -->
+  <form id="registration-submit" class="form-register">
+    <h4 class="form-register-heading">Sign up</h4>
+    <label for="inputFirstname" class="sr-only">Firstname</label>
+    <input type="text" id="inputFirstname" name="firstname" class="form-control form-control-sm" placeholder="Firstname" required autofocus>
+    <label for="inputLastname" class="sr-only">Lastname</label>
+    <input type="text" id="inputLastname" name="lastname" class="form-control form-control-sm" placeholder="Lastname" required autofocus>
+    <!-- <input type="date" id="inputBirthdate" name="birthdate" class="form-control" placeholder="Birthdate" required autofocus> -->
+    <label for="inputStreet" class="sr-only">Street</label>
+    <input type="text" id="inputStreet" name="street" class="form-control form-control-sm" placeholder="Street, Number" required autofocus>
+    <label for="inputCity" class="sr-only">City</label>
+    <input type="text" id="inputCity" name="city" class="form-control form-control-sm" placeholder="City" required autofocus>
+    <label for="inputPostal" class="sr-only">Postal</label>
+    <input type="text" id="inputPostal" name="postal" class="form-control form-control-sm" placeholder="Postcode" required autofocus>
+    <label for="inputTel" class="sr-only">Telefon</label>
+    <!-- <input type="tel" id="inputTel" name="tel" class="form-control" placeholder="Telephone" required autofocus> -->
+    <label for="inputRegEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputRegEmail" name="email" class="form-control form-control-sm" placeholder="Email address" required autofocus>
+    <label for="inputPasswordReg" class="sr-only">Password</label>
+    <input type="password" id="inputPasswordReg" name="password" class="form-control form-control-sm" placeholder="Password" minlength="6" required autofocus>
+    <label for="inputPasswordConfirmReg" class="sr-only">Password</label>
+    <input type="password" id="inputPasswordConfirmReg" name="passwordconfirm" class="form-control" placeholder="Confirm Password" minlength="6" required autofocus>
+    <button class="btn btn-primary btn-block" id="btnSubmit" type="submit">Register Now</button>
+    <a id="login-link" class="signin-link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Already Registered? Sign-in!</a>
+  </form>
+</div> <!-- /container -->

@@ -1,0 +1,382 @@
+@import './custom-bootstrap';
+
+.card {
+  margin-top: $grid-gutter-width * 0.5;
+  margin-bottom: $grid-gutter-width * 0.5;
+}
+
+.shop- {
+  &carousel {
+    height: 50vh;
+    min-height: 200px;
+
+    &-description {
+      padding: $grid-gutter-width * 0.5;
+    }
+
+    &-description h2{
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+.carousel-inner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.shop-description {
+  margin: 20px 20px;
+}
+
+.infobox {
+  margin: 20px 20px;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.modal-description, .modal-total {
+  margin: 20px;
+}
+
+.modal-content img {
+  margin: 10px auto;
+  max-width:80%;
+}
+
+.detailsButton {
+  margin: 0 5px;
+}
+
+$main-color: #6394F8;
+$light-text: #ABB0BE;
+
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+nav {
+  .navbar-right {
+    float: right;
+  }
+  ul {
+    
+    li {
+      display: inline;
+      margin: auto auto;
+      margin-left: .5rem;
+      vertical-align:middle;
+      a {
+        color: #fff;
+        text-decoration: none;
+        
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      i {
+          margin-right: .2rem;
+        }
+      }
+    }
+  }
+}
+
+#products-grid, #checkout-form {
+  position:absolute;
+}
+
+.shopping-nav {
+  margin:0;
+  padding:0;
+}
+
+.badge {
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shopping-cart, .login-container, .register-container {
+  position: fixed!important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+  z-index:10;
+  margin: 20px 0;
+  right:10px;
+  top:50px;
+  background: white;
+  position: relative;
+  border-radius: 3px;
+  padding: 20px;
+  
+  
+  .shopping-cart-header, .login-header, .register-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+    
+    .shopping-cart-total {
+      float: right;
+    }
+  }
+
+
+  
+  .removeItem {
+    margin: 15px;
+  }
+
+  .shopping-cart-items {
+    
+    padding: 20px 0;
+
+      li {
+        margin-bottom: 18px;
+        list-style-type: none;
+      }
+
+    img {
+      float: left;
+      margin-right: 12px;
+    }
+    
+    .item-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+    
+    .item-price {
+      color: $main-color;
+      margin-right: 8px;
+    }
+    
+    .item-quantity {
+      color: $light-text;
+    }
+  }
+   
+}
+
+.shopping-cart {
+  width: 400px;
+}
+
+.login-container, .register-container {
+  width: 300px;
+}
+
+.shopping-cart:after, .login-container:after, .register-container:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.cart-icon {
+  color: #515783;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+
+.button {
+  background: $main-color;
+  color:white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 25px 0 15px 0;
+  
+  &:hover {
+    background: lighten($main-color, 3%);
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cart-img {
+  max-width:100px;
+  max-height:auto;
+}
+
+  
+/****** LOGIN MODAL ******/
+.form-signin, .form-register {
+  max-width: 300px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.login-container {
+  right: 80px;
+}
+
+#checkout-container {
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.checkout-form {
+  background-color: #e6e6e6;
+  padding: 1rem;
+  border-radius: .3rem;
+  .checkout-label {
+    display: inline-block;
+    margin-bottom: .1rem;
+    margin-top: 1rem;
+    padding-left: .5rem;
+    font-size: 1rem;
+  }
+  .cart-total, .end-total, .ded-total {
+    font-size: 1rem;
+    float: left;
+    font-weight: 500;
+    padding-left: .3em;
+  }
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.form-check-label {
+  padding-left: 0;
+  margin-top: 0;
+  .form-check-input {
+    margin-left: 0;
+  }
+  span {
+    margin-left: 1.5em;
+  }
+}
+
+.form-signin .form-signin-heading,
+.form-register .form-register-heading {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+/* .form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+} */
+.form-signin .form-control:focus,
+.form-register .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"],
+.form-register input[type="email"],
+.form-register input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin, 
+.form-register {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-register .form-register-heading {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox,
+.form-register .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control,
+.form-register .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+.form-signin .form-control:focus,
+.form-register .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.signin-link {
+  text-decoration: none;
+  margin-top: .5rem;
+  font-size: .8rem;
+}
+
+/****** Payment Form ******/
+
+.alert-danger {
+  margin-top: 1rem;
+}
+
+.product-list {
+  list-style-type: none;
+  font-size: 1rem;
+  padding: 0 .3em;
+  margin: 1rem 1rem 3rem 1rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+  
+  .product-name, .product-price, .product-quantity {
+    margin-right: 1rem;
+  }
+}
+
