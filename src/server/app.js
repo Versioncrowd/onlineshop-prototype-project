@@ -37,7 +37,8 @@ var con = mysql.createConnection({
 
 app.use(express.static(frontendDirectoryPath));
 app.use(cors());
-app.use(bodyParser());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 
 // always want to have /api in the beginning
 const apiRouter = new Router();
