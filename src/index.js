@@ -370,7 +370,7 @@ $(() => {
   $pageContent.css('padding-top', $('.navbar').outerHeight());
 
   // read categories
-  $.ajax('http://localhost:9090/api/categories')
+  $.ajax('http://sabinegottfried.tk:9090/api/categories')
     .done((data) => {
       // store the data in the variable declared above
       categories = data;
@@ -380,7 +380,7 @@ $(() => {
     .fail(handleAJAXError);
 
   // ajax req and append products grid
-  $.ajax('http://localhost:9090/api/products')
+  $.ajax('http://sabinegottfried.tk:9090/api/products')
     .done((data) => {
       // store the data in the variable declared above
       products = data;
@@ -405,7 +405,7 @@ $(() => {
       // console.log(userlogindata);
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:9090/api/login',
+        url: 'http://sabinegottfried.tk:9090/api/login',
         contentType: 'application/json',
         data: json,
         dataType: 'json',
@@ -448,7 +448,7 @@ $(() => {
     console.log(json);
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:9090/api/register',
+      url: 'http://sabinegottfried.tk:9090/api/register',
       contentType: 'application/json',
       data: json
       /* error: (xhr, status) => {
@@ -502,7 +502,7 @@ $(() => {
     const json = JSON.stringify(user);
      $.ajax({
       type: 'POST',
-      url: 'http://localhost:9090/api/update',
+      url: 'http://sabinegottfried.tk:9090/api/update',
       contentType: 'application/json',
       data: json,
       error: (xhr, status) => {
@@ -538,7 +538,7 @@ $(() => {
   if (url.indexOf('activate') >= 0) {
     const code = url.substr(url.length - 20);
     console.log(code);
-    const adress = `http://localhost:9090/api/activate/${code}`;
+    const adress = `http://sabinegottfried.tk:9090/api/activate/${code}`;
     console.log(adress);
 
     $.ajax({
