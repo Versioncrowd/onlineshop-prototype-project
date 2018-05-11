@@ -16,8 +16,8 @@ const frontendDirectoryPath = path.resolve(__dirname, './../static');
 
 console.log('static resource at: ' + frontendDirectoryPath);
 
-let shopConfigPath = './.online_shop.json';
-/* let shopConfigPath = process.env.HOME + '/.online_shop.json'; */
+/* let shopConfigPath = './.online_shop.json'; */
+let shopConfigPath = process.env.HOME + '/.online_shop.json';
 let shopConfig = null;
 
 if (!fs.existsSync(shopConfigPath)) {
