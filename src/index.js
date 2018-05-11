@@ -294,7 +294,7 @@ $(() => {
       console.log(user.token);
      
       // to send a POST request to the server
-      $.ajax('http://localhost:9090/api/order', {
+      $.ajax('http://sabinegottfried.tk:9090/api/order', {
         method: 'POST',
         headers: {
           "Authorization": "Bearer " + user.token
@@ -338,7 +338,7 @@ $(() => {
       .find('.payment-methods')
       .empty();
 
-    $.ajax('//localhost:9090/api/payment_methods')
+    $.ajax('//sabinegottfried.tk:9090/api/payment_methods')
       .done((data) => {
         // for each payment methods returned by the API
         data.forEach((paymentMethod) => {

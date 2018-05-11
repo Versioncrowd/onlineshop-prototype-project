@@ -63,7 +63,7 @@ webpackJsonp(["index"],{"./node_modules/asn1.js/lib/asn1.js":function(e,t,o){var
         <span class="item-name">${e.name}</span>
         <span class="item-price">Price: ${e.price}€</span>
         <span class="item-quantity">Quanity: ${e.quantity}</span>
-      </li>`),a+=parseInt(e.price,10)*e.quantity}),e.find(".cart-total").text(`Total: € ${a}`),e.find(".ded-total").text(`Deduction: € ${a}`),e.find(".checkout-buy").click((o)=>{o.preventDefault();const a=JSON.stringify({products:r,user:{id:t.id,email:t.email,name:e.find("[name=\"user-name\"]").val(),street:e.find("[name=\"user-street\"]").val(),city:e.find("[name=\"user-city\"]").val()}});console.log(t.token),n.a.ajax("http://localhost:9090/api/order",{method:"POST",headers:{Authorization:"Bearer "+t.token},contentType:"application/json",data:a}).done(()=>{e.empty().append(`<div class="alert alert-success">
+      </li>`),a+=parseInt(e.price,10)*e.quantity}),e.find(".cart-total").text(`Total: € ${a}`),e.find(".ded-total").text(`Deduction: € ${a}`),e.find(".checkout-buy").click((o)=>{o.preventDefault();const a=JSON.stringify({products:r,user:{id:t.id,email:t.email,name:e.find("[name=\"user-name\"]").val(),street:e.find("[name=\"user-street\"]").val(),city:e.find("[name=\"user-city\"]").val()}});console.log(t.token),n.a.ajax("http://sabinegottfried.tk:9090/api/order",{method:"POST",headers:{Authorization:"Bearer "+t.token},contentType:"application/json",data:a}).done(()=>{e.empty().append(`<div class="alert alert-success">
               The order has been placed!
             </div>`)}).fail(()=>{e.empty().append(`<div class="alert alert-danger">
               An error occured, sorry.
